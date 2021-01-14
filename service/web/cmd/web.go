@@ -26,6 +26,7 @@ func main() {
 	e.Logger.SetLevel(log.DEBUG)
 
 	e.Validator = &CustomValidator{validator: validator.New()}
+	registerRoutes(e)
 	run(e, "", 9000)
 }
 
